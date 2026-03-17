@@ -10,8 +10,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.github.JoaoHotz.rm556402_navigation.screens.LoginScreen
+import com.github.JoaoHotz.rm556402_navigation.screens.MenuScreen
+import com.github.JoaoHotz.rm556402_navigation.screens.PedidosScreen
+import com.github.JoaoHotz.rm556402_navigation.screens.PerfilScreen
 import com.github.JoaoHotz.rm556402_navigation.ui.theme.Rm556402NavigationTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,14 +26,28 @@ class MainActivity : ComponentActivity() {
         setContent {
             Rm556402NavigationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LoginScreen(
-                        modifier = Modifier.padding(innerPadding),
-                        navController = TODO()
-                    );
+                    val navController = rememberNavController()
 
+                    NavHost(
+                        navController = navController,
+                        startDestination = "login",
+                    ) {
+                        composable(route = "login") {
+                            LoginScreen(modifier = Modifier.padding(innerPadding), navController)
+                        }
+                        composable(route = "menu") {
+                            MenuScreen(modifier = Modifier.padding(innerPadding), navController)
+                        }
+                        composable(route = "pedidos") {
+                            PedidosScreen(modifier = Modifier.padding(innerPadding), navController)
+                        }
+                        composable(route = "perfil") {
+                            PerfilScreen(modifier = Modifier.padding(innerPadding), navController)
+                        }
+                    }
+                }
+            }
                 }
             }
         }
-    }
-}
 
