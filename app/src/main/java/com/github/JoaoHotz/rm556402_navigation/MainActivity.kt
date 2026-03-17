@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.github.JoaoHotz.rm556402_navigation.screens.LoginScreen
 import com.github.JoaoHotz.rm556402_navigation.ui.theme.Rm556402NavigationTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,6 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             Rm556402NavigationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    LoginScreen(
+                        modifier = Modifier.padding(innerPadding),
+                        navController = TODO()
+                    );
 
                 }
             }
