@@ -7,13 +7,13 @@ Tela de login:
 
 Tela de menu:
 
-<img alt="login" src="C:\Users\joaov\AndroidStudioProjects\rm556402Navigation\app\images\Captura de tela 2026-03-17 143122.png"/>
+<img alt="login" src="\app\images\Menu.png"/>
 
 
 Tela de perfil:
 
-<img alt="login" src="C:\Users\joaov\AndroidStudioProjects\rm556402Navigation\app\images\Captura de tela 2026-03-17 143340.png"/>
+<img alt="login" src="\app\images\Pedidos.png"/>
 
 Tela de pedidos:
 
-<img alt="login" src="C:\Users\joaov\AndroidStudioProjects\rm556402Navigation\app\images\Screenshot_20260317_143623.png"/>
+<img alt="login" src="\app\images\Perfil.png"/>
